@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="../styles/css/index.css">
+	</head>
+	<body>
+		<h1>This is a H1 tag styles</h1>
+		<h2>This is a H1 tag styles</h2>
+
+		<h3>This is a H1 tag styles</h3>
+
+		<h4>This is a H1 tag styles</h4>
+
+		<div class="sectionContent">
+			After having the same issue, I got confused with all the answers here and the comments over the repository of sass in github.
+
+I just want to point out that as December 2014, this issue has been resolved. It is now possible to import css files directly into your sass file. The following PR in github solves the issue.
+
+The syntax is the same as now - @import "your/path/to/the/file", without an extension after the file name. This will import your file directly. If you append *.css at the end, it will translate into the css rule @import url(...).
+		</div>
+	</body>
+</html>

@@ -1,0 +1,59 @@
+@import "styleVariables";
+@import "layoutVariables";
+@import "mixins";
+
+
+/*
+** The Box sizing to Border box will add border and padding of a element adds into the width of a element
+*/
+
+*, *:before, *:after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+	background-color: $grayBackground;
+	font-size: $body_fontSize;
+	font-family: $body_fontFamily;
+}
+
+.sectionContent {
+	border: 1px solid $green;
+	padding: $gridGap-5;
+	@include borderRadius(15px, $border_gray);
+}
+
+header {
+	display: grid;
+
+	h1 {
+		font-size: 1em;
+		text-transform: uppercase;
+		font-weight: bold;
+		text-align: center;
+	}
+
+	.header--activities {
+		display: flex;
+
+		figure {
+			flex: 0 1 15%
+		}
+
+		.header--search {
+			flex: 0 1 65%
+		}
+
+		.header--userProfile {
+			flex: 0 1 10%
+		}
+
+		.header--cart {
+			flex: 0 1 10%
+		}
+
+	}
+}
+

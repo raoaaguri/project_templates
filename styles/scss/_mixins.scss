@@ -1,0 +1,11 @@
+/*
+** CSS Utility function 
+*/
+
+
+
+@mixin borderRadius($size, $color) {
+  border-radius: $size;
+  -moz-border-radius: $size;
+}
+

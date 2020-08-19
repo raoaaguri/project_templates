@@ -1,0 +1,41 @@
+/*
+** CSS Utility function 
+*/
+/*
+** The Box sizing to Border box will add border and padding of a element adds into the width of a element
+*/
+*, *:before, *:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+body {
+  background-color: #F3F3F3;
+  font-size: 1em;
+  font-family: "Lato", sans-serif; }
+
+.sectionContent {
+  border: 1px solid #009E7F;
+  padding: 0.5em;
+  border-radius: 15px;
+  -moz-border-radius: 15px; }
+
+header {
+  display: grid; }
+  header h1 {
+    font-size: 1em;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center; }
+  header .header--activities {
+    display: flex; }
+    header .header--activities figure {
+      flex: 0 1 15%; }
+    header .header--activities .header--search {
+      flex: 0 1 65%; }
+    header .header--activities .header--userProfile {
+      flex: 0 1 10%; }
+    header .header--activities .header--cart {
+      flex: 0 1 10%; }
+
+/*# sourceMappingURL=index.css.map */

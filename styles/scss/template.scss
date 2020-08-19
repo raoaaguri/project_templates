@@ -1,0 +1,24 @@
+@import "styleVariables";
+@import "layoutVariables";
+@import "mixins";
+
+
+/*
+** The Box sizing to Border box will add border and padding of a element adds into the width of a element
+*/
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+body {
+	background-color: $grayBackground;
+	font-size: $body_fontSize;
+	font-family: $body_fontFamily;
+}
+
+.sectionContent {
+	border: 1px solid $green;
+	padding: $gridGap-5;
+	@include borderRadius(15px, $border_gray);
+}
