@@ -118,20 +118,20 @@ header {
 main {
 	display: grid;
 	grid-gap: 20px;
-	@include for-size (sm-desktop-up){
+	//less than desktop size which is 1200
+	@include for-size (desktop-up) {
 		grid-template-columns: 1fr 1fr 1fr;
 	}
-	@include for-size (desktop-up){
-		grid-template-columns: 1fr 1fr 1fr;
-	}
-	@include for-size (md-desktop-up){
-		grid-template-columns: 1fr 1fr 1fr 1fr;
-	}
-	@include for-size (big-desktop-up){
-		grid-template-columns: 1fr 1fr 1fr 1fr;
-	}
-	grid-template-columns: 1fr 1fr 1fr;
+	//begger than desktop size which is 1200
+	grid-template-columns: 1fr 1fr 1fr 1fr;
 	padding: 25px 15px;
+
+	//These styles are only for Mobiles
+	@include for-size (phone-only) {
+		grid-gap: 10px;
+	    grid-template-columns: 1fr 1fr;
+	    padding: 10px 5px;
+	}
 
 	h2 {
 		font-size: 1.3rem;
@@ -154,7 +154,7 @@ main {
 				figure {
 					 img {
 					 	max-width: 100%;
-					 	vartical-align: middle;
+					 	vertical-align: middle;
 					 }
 
 					.caption {
@@ -210,6 +210,7 @@ footer {
 			width: 60%;
 		}
 	}
+
 
 	.footer-shop--collection {
 		flex: 0 1 50%;
