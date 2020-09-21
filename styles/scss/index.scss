@@ -26,7 +26,7 @@ body {
 	@include borderRadius(15px, $border_gray);
 }
 
-header {
+header.buyindiantoys__header {
 	display: grid;
 
 	h1 {
@@ -76,6 +76,9 @@ header {
 		padding: 5px;
 		background-color: $green;
 		color: $white;
+		@include for-size (phone-only) {
+			display: none;
+		}
 
 		ul {
 			display: flex;
@@ -119,17 +122,17 @@ main {
 	display: grid;
 	grid-gap: 20px;
 	//less than desktop size which is 1200
-	@include for-size (desktop-up) {
-		grid-template-columns: 1fr 1fr 1fr;
+	@include for-size (md-desktop-up) {
+		grid-template-columns: 1fr 1fr 1fr 1fr;
 	}
 	//begger than desktop size which is 1200
-	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-columns: 1fr 1fr 1fr;
 	padding: 25px 15px;
 
 	//These styles are only for Mobiles
 	@include for-size (phone-only) {
 		grid-gap: 10px;
-	    grid-template-columns: 1fr 1fr;
+	    grid-template-columns: 1fr;
 	    padding: 10px 5px;
 	}
 
@@ -209,6 +212,9 @@ footer {
 		@include for-size (big-desktop-up){
 			width: 60%;
 		}
+		&.isMobile__content {
+			display: none;
+		}
 	}
 
 
@@ -285,6 +291,78 @@ footer {
 			}
 		}
 	}
+
+	//Mobile styles for footer
+
+	@include for-size (phone-only) {
+		display: grid;
+		grid-gap: 5px;
+		grid-template-columns: 1.1fr 1.1fr 0.8fr;
+		padding: 15px 0 0;
+
+		div:first-child {
+			border-right: 1px solid $white; 
+		}
+
+		div:nth-child(3) {
+			border-left: 1px solid $white; 
+		}
+
+		h2 {
+			width: 100%;
+			padding: 0 5px;
+			border-radius: 0;
+			font-size: .8rem;
+			background-color: transparent;
+    		color: $saffron;
+    		margin-bottom: 5px;
+
+			&:before, &:after {
+				display: none;
+			}
+			&.isDesktop__content {
+				display: none;
+			}
+			&.isMobile__content {
+				display: block;
+			}
+		}
+
+		.footer-shop--collection {
+			border-right: 0;
+			ul {
+				padding-left: 5px;
+			}
+		}
+
+		.footer-contactInfo {
+			margin-left: 0;
+		
+			h2 {
+				padding: 0;
+			}
+		}
+
+		.footer-info {
+			ul {
+				padding-left: 5px;
+			}
+		}
+
+		.footer__payment {
+			grid-column: 1 / span 4;
+			margin: 5px auto 0;
+		}
+	}
 }
 
+.section__copyright {
+	padding: 10px 0;
+	background-color: $black;
+	color: $white;
+	text-align: center;
+	span {
+		font-weight: bold;
+	}
+}
 

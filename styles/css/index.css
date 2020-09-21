@@ -22,50 +22,53 @@ body {
   border-radius: 15px;
   -moz-border-radius: 15px; }
 
-header {
+header.buyindiantoys__header {
   display: grid; }
-  header h1 {
+  header.buyindiantoys__header h1 {
     font-size: 1em;
     text-transform: uppercase;
     color: #FFFFFF;
     font-weight: bold;
     text-align: center;
     background-color: #FF9933; }
-  header .header--activities {
+  header.buyindiantoys__header .header--activities {
     display: flex;
     background-color: #FFFFFF; }
-    header .header--activities figure {
+    header.buyindiantoys__header .header--activities figure {
       flex: 0 1 30%; }
-      header .header--activities figure img {
+      header.buyindiantoys__header .header--activities figure img {
         height: 2.1rem;
         vertical-align: middle;
         margin-left: 2rem; }
-    header .header--activities .header--search {
+    header.buyindiantoys__header .header--activities .header--search {
       flex: 0 1 45%; }
-      header .header--activities .header--search input {
+      header.buyindiantoys__header .header--activities .header--search input {
         width: 80%;
         height: 1.8rem;
         margin: 2px 0 0; }
-    header .header--activities .header--userProfile {
+    header.buyindiantoys__header .header--activities .header--userProfile {
       flex: 0 1 10%; }
-    header .header--activities .header--cart {
+    header.buyindiantoys__header .header--activities .header--cart {
       flex: 0 1 15%; }
-  header section.categories {
+  header.buyindiantoys__header section.categories {
     display: flex;
     padding: 5px;
     background-color: #138808;
     color: #FFFFFF; }
-    header section.categories ul {
+    @media (max-width: 599px) {
+      header.buyindiantoys__header section.categories {
+        display: none; } }
+    header.buyindiantoys__header section.categories ul {
       display: flex;
       flex: 0 1 70%;
       font-size: .8rem; }
-      header section.categories ul .category--item {
+      header.buyindiantoys__header section.categories ul .category--item {
         flex: 0 1 17%;
         list-style: none;
         text-align: center;
         cursor: pointer;
         padding: 2px 0 0; }
-    header section.categories .browseCollection {
+    header.buyindiantoys__header section.categories .browseCollection {
       flex: 0 1 30%;
       text-transform: uppercase;
       cursor: pointer;
@@ -86,18 +89,14 @@ main {
   grid-gap: 20px;
   grid-template-columns: 1fr 1fr 1fr;
   padding: 25px 15px; }
-  @media (min-width: 1024px) {
-    main {
-      grid-template-columns: 1fr 1fr 1fr; } }
-  @media (min-width: 1200px) {
-    main {
-      grid-template-columns: 1fr 1fr 1fr; } }
   @media (min-width: 1380px) {
     main {
       grid-template-columns: 1fr 1fr 1fr 1fr; } }
-  @media (min-width: 1800px) {
+  @media (max-width: 599px) {
     main {
-      grid-template-columns: 1fr 1fr 1fr 1fr; } }
+      grid-gap: 10px;
+      grid-template-columns: 1fr;
+      padding: 10px 5px; } }
   main h2 {
     font-size: 1.3rem;
     text-transform: uppercase; }
@@ -113,7 +112,7 @@ main {
         margin: 5px; }
         main .display-4--boxs .boxs-4 div.display-box figure img {
           max-width: 100%;
-          vartical-align: middle; }
+          vertical-align: middle; }
         main .display-4--boxs .boxs-4 div.display-box figure .caption {
           text-align: center; }
 
@@ -151,6 +150,8 @@ footer {
     @media (min-width: 1800px) {
       footer h2 {
         width: 60%; } }
+    footer h2.isMobile__content {
+      display: none; }
   footer .footer-shop--collection {
     flex: 0 1 50%;
     border-right: 1px solid #FFFFFF; }
@@ -204,5 +205,50 @@ footer {
       position: absolute;
       left: 11px;
       text-transform: none; }
+  @media (max-width: 599px) {
+    footer {
+      display: grid;
+      grid-gap: 5px;
+      grid-template-columns: 1.1fr 1.1fr 0.8fr;
+      padding: 15px 0 0; }
+      footer div:first-child {
+        border-right: 1px solid #FFFFFF; }
+      footer div:nth-child(3) {
+        border-left: 1px solid #FFFFFF; }
+      footer h2 {
+        width: 100%;
+        padding: 0 5px;
+        border-radius: 0;
+        font-size: .8rem;
+        background-color: transparent;
+        color: #FF9933;
+        margin-bottom: 5px; }
+        footer h2:before, footer h2:after {
+          display: none; }
+        footer h2.isDesktop__content {
+          display: none; }
+        footer h2.isMobile__content {
+          display: block; }
+      footer .footer-shop--collection {
+        border-right: 0; }
+        footer .footer-shop--collection ul {
+          padding-left: 5px; }
+      footer .footer-contactInfo {
+        margin-left: 0; }
+        footer .footer-contactInfo h2 {
+          padding: 0; }
+      footer .footer-info ul {
+        padding-left: 5px; }
+      footer .footer__payment {
+        grid-column: 1 / span 4;
+        margin: 5px auto 0; } }
+
+.section__copyright {
+  padding: 10px 0;
+  background-color: #0D1136;
+  color: #FFFFFF;
+  text-align: center; }
+  .section__copyright span {
+    font-weight: bold; }
 
 /*# sourceMappingURL=index.css.map */
