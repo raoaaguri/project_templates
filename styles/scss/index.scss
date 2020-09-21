@@ -173,6 +173,10 @@ footer {
 		}
 	}
 
+	/*
+		Media query for screens above 1280 width
+	*/
+
 	h2 {
 		background-color: $saffron;
 		padding: 5px 5px 5px 30px;
@@ -181,7 +185,15 @@ footer {
 		font-size: 1rem;
 		margin-bottom: 15px;
 		border-radius: 15px;
-		width: 60%;
+		@include for-size (desktop-up){
+			width: 70%;
+		}
+		@include for-size (mid-desktop-up){
+			width: 60%;
+		}
+		@include for-size (big-desktop-up){
+			width: 60%;
+		}
 	}
 
 	.footer-shop--collection {
