@@ -118,6 +118,18 @@ header {
 main {
 	display: grid;
 	grid-gap: 20px;
+	@include for-size (sm-desktop-up){
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+	@include for-size (desktop-up){
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+	@include for-size (md-desktop-up){
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+	}
+	@include for-size (big-desktop-up){
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+	}
 	grid-template-columns: 1fr 1fr 1fr;
 	padding: 25px 15px;
 
@@ -185,10 +197,13 @@ footer {
 		font-size: 1rem;
 		margin-bottom: 15px;
 		border-radius: 15px;
+		@include for-size (sm-desktop-up){
+			width: 80%;
+		}
 		@include for-size (desktop-up){
 			width: 70%;
 		}
-		@include for-size (mid-desktop-up){
+		@include for-size (md-desktop-up){
 			width: 60%;
 		}
 		@include for-size (big-desktop-up){

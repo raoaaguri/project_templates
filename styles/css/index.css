@@ -1,6 +1,7 @@
 /*
 ** CSS Utility function 
 */
+/* Media Query Mixin*/
 /*
 ** The Box sizing to Border box will add border and padding of a element adds into the width of a element
 */
@@ -85,6 +86,18 @@ main {
   grid-gap: 20px;
   grid-template-columns: 1fr 1fr 1fr;
   padding: 25px 15px; }
+  @media (min-width: 1024px) {
+    main {
+      grid-template-columns: 1fr 1fr 1fr; } }
+  @media (min-width: 1200px) {
+    main {
+      grid-template-columns: 1fr 1fr 1fr; } }
+  @media (min-width: 1380px) {
+    main {
+      grid-template-columns: 1fr 1fr 1fr 1fr; } }
+  @media (min-width: 1800px) {
+    main {
+      grid-template-columns: 1fr 1fr 1fr 1fr; } }
   main h2 {
     font-size: 1.3rem;
     text-transform: uppercase; }
@@ -109,7 +122,10 @@ footer {
   background-color: #138808;
   padding: 35px;
   color: #FFFFFF;
-  font-size: .8rem; }
+  font-size: .8rem;
+  /*
+  	Media query for screens above 1280 width
+  */ }
   footer a {
     color: #FFFFFF;
     text-decoration: none; }
@@ -122,8 +138,19 @@ footer {
     text-transform: uppercase;
     font-size: 1rem;
     margin-bottom: 15px;
-    border-radius: 15px;
-    width: 60%; }
+    border-radius: 15px; }
+    @media (min-width: 1024px) {
+      footer h2 {
+        width: 80%; } }
+    @media (min-width: 1200px) {
+      footer h2 {
+        width: 70%; } }
+    @media (min-width: 1380px) {
+      footer h2 {
+        width: 60%; } }
+    @media (min-width: 1800px) {
+      footer h2 {
+        width: 60%; } }
   footer .footer-shop--collection {
     flex: 0 1 50%;
     border-right: 1px solid #FFFFFF; }

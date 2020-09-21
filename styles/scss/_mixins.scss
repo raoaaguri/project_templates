@@ -18,10 +18,12 @@
     @media (min-width: 600px) { @content; }
   } @else if $size == tablet-landscape-up {
     @media (min-width: 900px) { @content; }
-  } @else if $size == desktop-up {
+  } @else if $size == sm-desktop-up {
+    @media (min-width: 1024px) { @content; }
+  }@else if $size == desktop-up {
     @media (min-width: 1200px) { @content; }
-  } @else if $size == mid-desktop-up {
-    @media (min-width: 1580px) { @content; }
+  } @else if $size == md-desktop-up {
+    @media (min-width: 1380px) { @content; }
   }@else if $size == big-desktop-up {
     @media (min-width: 1800px) { @content; }
   }
