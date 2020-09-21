@@ -1,0 +1,21 @@
+/*
+** CSS Utility function 
+*/
+/*
+** The Box sizing to Border box will add border and padding of a element adds into the width of a element
+*/
+*, *:before, *:after {
+  box-sizing: border-box; }
+
+body {
+  background-color: #F3F3F3;
+  font-size: 1em;
+  font-family: "Lato", sans-serif; }
+
+.sectionContent {
+  border: 1px solid #138808;
+  padding: 0.5em;
+  border-radius: 15px;
+  -moz-border-radius: 15px; }
+
+/*# sourceMappingURL=template.css.map */
