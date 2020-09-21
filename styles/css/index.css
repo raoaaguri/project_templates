@@ -10,12 +10,13 @@
   padding: 0; }
 
 body {
-  background-color: #F3F3F3;
+  background-color: rgba(0, 0, 128, 0.14);
   font-size: 1em;
-  font-family: "Lato", sans-serif; }
+  font-family: "Lato", sans-serif;
+  color: #000080; }
 
 .sectionContent {
-  border: 1px solid #009E7F;
+  border: 1px solid #138808;
   padding: 0.5em;
   border-radius: 15px;
   -moz-border-radius: 15px; }
@@ -25,17 +26,156 @@ header {
   header h1 {
     font-size: 1em;
     text-transform: uppercase;
+    color: #FFFFFF;
     font-weight: bold;
-    text-align: center; }
+    text-align: center;
+    background-color: #FF9933; }
   header .header--activities {
-    display: flex; }
+    display: flex;
+    background-color: #FFFFFF; }
     header .header--activities figure {
-      flex: 0 1 15%; }
+      flex: 0 1 30%; }
+      header .header--activities figure img {
+        height: 2.1rem;
+        vertical-align: middle;
+        margin-left: 2rem; }
     header .header--activities .header--search {
-      flex: 0 1 65%; }
+      flex: 0 1 45%; }
+      header .header--activities .header--search input {
+        width: 80%;
+        height: 1.8rem;
+        margin: 2px 0 0; }
     header .header--activities .header--userProfile {
       flex: 0 1 10%; }
     header .header--activities .header--cart {
-      flex: 0 1 10%; }
+      flex: 0 1 15%; }
+  header section.categories {
+    display: flex;
+    padding: 5px;
+    background-color: #138808;
+    color: #FFFFFF; }
+    header section.categories ul {
+      display: flex;
+      flex: 0 1 70%;
+      font-size: .8rem; }
+      header section.categories ul .category--item {
+        flex: 0 1 17%;
+        list-style: none;
+        text-align: center;
+        cursor: pointer;
+        padding: 2px 0 0; }
+    header section.categories .browseCollection {
+      flex: 0 1 30%;
+      text-transform: uppercase;
+      cursor: pointer;
+      text-align: center; }
+
+#mainSlideContainer {
+  display: flex; }
+  #mainSlideContainer .slide-container {
+    display: flex;
+    flex: 0 1 100%;
+    width: 1560px; }
+    #mainSlideContainer .slide-container img {
+      max-width: 100%;
+      max-height: 100%; }
+
+main {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 25px 15px; }
+  main h2 {
+    font-size: 1.3rem;
+    text-transform: uppercase; }
+  main .display-4--boxs {
+    padding: 15px;
+    background-color: #FFFFFF;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.099); }
+    main .display-4--boxs .boxs-4 {
+      display: grid;
+      grid-gap: 2px;
+      grid-template-columns: 1fr 1fr; }
+      main .display-4--boxs .boxs-4 div.display-box {
+        margin: 5px; }
+        main .display-4--boxs .boxs-4 div.display-box figure img {
+          max-width: 100%;
+          vartical-align: middle; }
+        main .display-4--boxs .boxs-4 div.display-box figure .caption {
+          text-align: center; }
+
+footer {
+  display: flex;
+  background-color: #138808;
+  padding: 35px;
+  color: #FFFFFF;
+  font-size: .8rem; }
+  footer a {
+    color: #FFFFFF;
+    text-decoration: none; }
+  footer ul li {
+    list-style: none; }
+  footer h2 {
+    background-color: #FF9933;
+    padding: 5px 5px 5px 30px;
+    position: relative;
+    text-transform: uppercase;
+    font-size: 1rem;
+    margin-bottom: 15px;
+    border-radius: 15px;
+    width: 60%; }
+  footer .footer-shop--collection {
+    flex: 0 1 50%;
+    border-right: 1px solid #FFFFFF; }
+    footer .footer-shop--collection h2:before {
+      content: "";
+      position: absolute;
+      left: 3px;
+      top: 4px;
+      background-color: #FFFFFF;
+      width: 20px;
+      height: 20px;
+      border-radius: 15px; }
+    footer .footer-shop--collection h2:after {
+      content: "i";
+      color: #FF9933;
+      position: absolute;
+      left: 11px;
+      text-transform: none; }
+  footer .footer-contactInfo {
+    flex: 0 1 25%;
+    margin-left: 25px; }
+    footer .footer-contactInfo h2:before {
+      content: "";
+      position: absolute;
+      left: 3px;
+      top: 4px;
+      background-color: #FFFFFF;
+      width: 20px;
+      height: 20px;
+      border-radius: 15px; }
+    footer .footer-contactInfo h2:after {
+      content: "i";
+      color: #FF9933;
+      position: absolute;
+      left: 11px;
+      text-transform: none; }
+  footer .footer-info {
+    flex: 0 1 25%; }
+    footer .footer-info h2:before {
+      content: "";
+      position: absolute;
+      left: 3px;
+      top: 4px;
+      background-color: #FFFFFF;
+      width: 20px;
+      height: 20px;
+      border-radius: 15px; }
+    footer .footer-info h2:after {
+      content: "i";
+      color: #FF9933;
+      position: absolute;
+      left: 11px;
+      text-transform: none; }
 
 /*# sourceMappingURL=index.css.map */

@@ -2,37 +2,36 @@
 $white: #FFFFFF;
 $black: #0D1136;
 
-$body_fontColor: $black;
+$saffron: #FF9933;
+$green: #138808;
+$navyBlue: #000080;
 
-
-$green: #009E7F;
 $grayBackground: #F3F3F3;
 $grayFontColor: #77798C;
 
 $headerFonrColor: #0D1136;
 $sectionFontColor: #424561;
 
-
 //Button Colors
-$button_green: #009E7F;
+$button_green: #138808;
 $button_red: #FF4546;
 $button_blue: #0168b8;
 
 //Font Colors
-$font_green: #009E7F;
+$font_green: #138808;
 $font_red: #FF4546;
 $font_blue: #0168b8;
 $font_gray: #77798C;
 
 //Background Colors
-$background_green: #009E7F;
+$background_green: #138808;
 $background_red: #FF4546;
 $background_blue: #0168b8;
 $background_gray: #F7F7F7;
 
 //Border Colors
 $border_gray: #F7F7F7;
-$border_green: #009E7F;
+$border_green: #138808;
 $border_red: #FF4546;
 $border_blue: #0168b8;
 
@@ -50,5 +49,9 @@ $h4_fontSize: .7em;
 $body_fontFamily: 'Lato',sans-serif;
 $heading_fontFamily: 'Poppins',sans-serif;
 
+// Body properties
+
+$body_fontColor: $navyBlue;
+$body_bgColor: rgba(0,0,128,.14);
 
 
